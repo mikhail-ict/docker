@@ -3,8 +3,8 @@ FROM beakerx/beakerx
 
 USER root
 
-RUN sudo apt-get update \
-  && sudo apt-get install build-essential
+RUN sudo apt-get update && \
+  sudo apt-get install -y build-essential
 
 # Install jupyter RISE extension.
 RUN pip install --upgrade pip \
