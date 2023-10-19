@@ -5,7 +5,7 @@ USER root
 
 # Install jupyter RISE extension.
 RUN pip install --upgrade pip \
-  && pip install --upgrade notebook
+  && pip install --upgrade notebook \
   && pip install jupyter_contrib-nbextensions RISE \
   && jupyter-nbextension install rise --py --system \
   && jupyter-nbextension enable rise --py --system \
