@@ -16,3 +16,8 @@ RUN pip install --upgrade pip \
 
 # Set user back to privileged user.
 USER $NB_USER
+
+RUN pip install hide_code \
+  && jupyter nbextension install --py hide_code --user \
+  && jupyter nbextension enable --py hide_code --user \
+  && jupyter serverextension enable --py hide_code --user
